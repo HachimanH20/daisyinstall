@@ -1,12 +1,13 @@
 # How to install a custom ROM on Xiaomi Mi A2 Lite
 
 ### Prerequisites
-* Official 10.3.0.0 firmware: http://bigota.d.miui.com/V10.0.3.0.PDLMIXM/daisy_global_images_V10.0.3.0.PDLMIXM_20190114.0000.00_9.0_e8d8d4a6d0.tgz (some people reported that 10.0.7.0 and later versions also work fine, however sometimes they might cause problems with Wi-Fi and cell connectivity, so I suggest you go with 10.3.0.0) 
+* Official 10.0.9.0 firmware: http://bigota.d.miui.com/V10.0.9.0.PDLMIXM/daisy_global_images_V10.0.9.0.PDLMIXM_20190514.0000.00_9.0_f9d0c739e0.tgz (10.0.9.0 or higher is recommended)
 * Fastboot and ADB: https://www.xda-developers.com/google-releases-separate-adb-and-fastboot-binary-downloads/
-* Offain's TWRP image: https://androidfilehost.com/?fid=1395089523397933315
-* Offain's TWRP ZIP: https://androidfilehost.com/?fid=1395089523397933316
+* Offain's TWRP image: https://androidfilehost.com/?fid=6006931924117887098
+* Offain's TWRP ZIP: https://androidfilehost.com/?fid=6006931924117887097
 * ForceEncryption disabler: https://forum.xda-developers.com/attachment.php?attachmentid=4704479&d=1550012433
-* A custom ROM ZIP, for example crDroid: https://crdroid.net/daisy
+* Camera2Api enabler: https://drive.google.com/file/d/1rdKquGLREc69G53RKXk9fe5f7lH24k6O/view?usp=drivesdk
+* A custom ROM zip
 
 ### Introduction
 Installing a custom ROM on an Android phone used to be a walk in the park. However, some newer phones, like Xiaomi Mi A2 Lite, have what's called an **A/B partition layout**. This facilitates an update process on stock ROMs, however it makes it harder to install and develop custom ROMs. You can read more about A/B partitions here: https://www.xda-developers.com/how-a-b-partitions-and-seamless-updates-affect-custom-development-on-xda/  
@@ -20,14 +21,14 @@ The upshot is that Mi A2 Lite doesn't have a recovery partition. Instead, when y
 * Put all the prerequisites in one folder on your computer
 * Turn off your phone, wait for 3 seconds, then press volume down and power buttons simultaneously until you see the fastboot logo (you won't miss it)
 * Connect the phone to the computer (do it fast, because the phone will turn off after a few seconds without being connected to the computer)
-* Back up all of the data on your phone, then go to the folder with stock firmware (*daisy_global_images_V10.0.3.0.PDLMIXM_9.0*)
+* Back up all of the data on your phone, then go to the folder with stock firmware (*daisy_global_images_V*PDLMIXM_9.0*)
 * Double click on `flash_all.bat` 
 * Wait for the process to be finished
 
 #### 2. Flash the custom ROM
 * After your phone has rebooted successfully, turn it off and go into the fastboot mode again. Connect the phone to the computer
 * Launch the command line and go to the folder where you put all the prerequisites (`cd Folder_name`)
-* Boot the recovery image: `fastboot boot twrp-daisy-3.3.0-0-offain.img`
+* Boot the recovery image: `fastboot boot twrp-daisy-3.3.1-0-offain.img`
 * You will see the recovery on your phone, prompting to enter the password. Choose "Cancel"
 * In the main menu, choose "Wipe", then tap "Format Data". Type "yes".
 * On your computer, copy all the ZIPs you've downloaded earlier using adb: `adb push *.zip /sdcard`
@@ -37,7 +38,7 @@ The upshot is that Mi A2 Lite doesn't have a recovery partition. Instead, when y
   * ForceEncryption Disabler
 * Don't install Magisk, GApps or anything else yet, we will do that later!
 * After everything is done, **DON'T TAP REBOOT YET**. Instead, go back to the main menu, choose "Reboot", change the slot (e.g. if it says "Current Slot: A", tap "Slot B", vice versa. Quit the menu and tap "Recovery" in the reboot menu.
-* Copy anything you would like to install on your phone (Magisk, Gapps, modules, etc.) and flash it the usual way.
+* Copy anything you would like to install on your phone (Magisk, Gapps, modules gcamfix, etc.) and flash it the usual way.
 * Reboot your phone
 
 ## Dirty flashing / installing updates
@@ -76,5 +77,7 @@ You have to repeat the process every time you get an OTA if you want to keep Mag
 
 
 ### Credits
+@tkchn for making this guide
 @33bca for the device trees and TWRP
-@Saksham033 for Camera2 API fix
+@Saksham033 for device trees Camera2 API fix
+@eremitein for flashable GCAM fix
