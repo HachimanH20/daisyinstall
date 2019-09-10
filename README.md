@@ -7,7 +7,7 @@
 * Offain's TWRP ZIP: https://androidfilehost.com/?fid=6006931924117887097
 * ForceEncryption disabler: https://forum.xda-developers.com/attachment.php?attachmentid=4704479&d=1550012433
 * Camera2Api enabler: https://drive.google.com/file/d/1rdKquGLREc69G53RKXk9fe5f7lH24k6O/view?usp=drivesdk
-* A custom ROM zip
+* A custom ROM zip (you can take one from here: https://docs.google.com/spreadsheets/d/1Uy6qouIV0WbVouK4X5PhmUz2quxfLguHDqSf6LYDBO8/edit#gid=0
 
 ### Introduction
 Installing a custom ROM on an Android phone used to be a walk in the park. However, some newer phones, like Xiaomi Mi A2 Lite, have what's called an **A/B partition layout**. This facilitates an update process on stock ROMs, however it makes it harder to install and develop custom ROMs. You can read more about A/B partitions here: https://www.xda-developers.com/how-a-b-partitions-and-seamless-updates-affect-custom-development-on-xda/  
