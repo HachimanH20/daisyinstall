@@ -38,7 +38,7 @@ The upshot is that Mi A2 Lite doesn't have a recovery partition. Instead, when y
   * ForceEncryption Disabler
 * Don't install Magisk, GApps or anything else yet, we will do that later!
 * After everything is done, **DON'T TAP REBOOT YET**. Instead, go back to the main menu, choose "Reboot", change the slot (e.g. if it says "Current Slot: A", tap "Slot B", vice versa. Quit the menu and tap "Recovery" in the reboot menu.
-* Copy anything you would like to install on your phone (Magisk, Gapps, modules gcamfix, etc.) and flash it the usual way.
+* Copy anything you would like to install on your phone (Magisk, Gapps, modules, gcamfix, etc.) and flash it the usual way.
 * Reboot your phone
 
 ## Dirty flashing / installing updates
